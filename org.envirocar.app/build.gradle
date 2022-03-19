@@ -103,6 +103,10 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     ndkVersion rootProject.ext.ndkVersion
 
+    buildFeatures {
+        viewBinding true
+    }
+
     signingConfigs {
         release {
             storeFile file(project.properties['RELEASE_STORE_FILE'] ?: "/tmp/tmp.key")
